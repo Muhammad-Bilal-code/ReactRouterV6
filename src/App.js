@@ -8,6 +8,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import UserList from "./components/UserList";
 import UserDetail from "./components/UserDetail";
+import Filter from "./pages/Filter";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/filter" element={<Filter />} />
         <Route path="/users" element={<UserList />} />
         <Route path="/users/:name" element={<UserDetail />} />
         <Route path="/*" element={<h2>404 Page Not Found</h2>}></Route>

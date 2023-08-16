@@ -44,6 +44,17 @@ const Navbar = () => {
             Users
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/filter"
+            className="navabar-link"
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? "green" : "transparent" };
+            }}
+          >
+            Filter
+          </NavLink>
+        </li>
       </ul>
     </>
   );
