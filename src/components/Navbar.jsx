@@ -1,12 +1,24 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <>
+    <div
+      className="nav-main"
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "10px",
+      }}
+    >
       {/* <h2>Navbar</h2> */}
-      <ul className="navbar">
-        <li>
+      <div className="logo">
+        <NavLink to="/" style={{ textDecoration: "none" }}>
+          Logo
+        </NavLink>
+      </div>
+      <ul className="navbar" style={{ margin: "0" }}>
+        {/* <li>
           <NavLink
             to="/home"
             className="navabar-link"
@@ -16,6 +28,8 @@ const Navbar = () => {
           >
             Home
           </NavLink>
+        </li> */}
+        <li>
           <NavLink
             to="/about"
             className="navabar-link"
@@ -25,6 +39,8 @@ const Navbar = () => {
           >
             About
           </NavLink>
+        </li>
+        <li>
           <NavLink
             to="/contact"
             className="navabar-link"
@@ -34,6 +50,8 @@ const Navbar = () => {
           >
             Contact
           </NavLink>
+        </li>
+        <li>
           <NavLink
             to="/users"
             className="navabar-link"
@@ -55,8 +73,19 @@ const Navbar = () => {
             Filter
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/redirect"
+            className="navabar-link"
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? "green" : "transparent" };
+            }}
+          >
+            Redirect
+          </NavLink>
+        </li>
       </ul>
-    </>
+    </div>
   );
 };
 

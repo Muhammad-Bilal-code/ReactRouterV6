@@ -17,7 +17,7 @@ ul.user-list li{
   justify-content: flex-end;
   list-style: none;
 }
-a.navabar-link,a.user-link {
+a.navabar-link {
   text-decoration: none;
   margin: 10px;
 }
