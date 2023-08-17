@@ -83,6 +83,24 @@ const Navbar = () => {
           >
             Redirect
           </NavLink>
+          <NavLink
+            to={"/login"}
+            className="navabar-link"
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? "green" : "transparent" };
+            }}
+          >
+            Login
+          </NavLink>
+          <NavLink
+            to={"/logout"}
+            className="navabar-link"
+            style={({ isActive }) => {
+              return { backgroundColor: isActive ? "green" : "transparent" };
+            }}
+          >
+            Logout
+          </NavLink>
         </li>
       </ul>
     </div>

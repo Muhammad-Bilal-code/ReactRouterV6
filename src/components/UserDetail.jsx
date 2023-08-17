@@ -1,13 +1,20 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 const UserDetail = () => {
-  const { name } = useParams();
-  console.log(name);
+  const location = useLocation();
+  console.log(location);
+  console.log(location.state);
+
+  const { name, username, id } = location.state;
+  // const { name } = useParams();
+  // console.log(name);
   return (
     <>
       <h2>User Detail </h2>
-      <p>{name}</p>
+      {name}
+      {username}
+      {id}
     </>
   );
 };

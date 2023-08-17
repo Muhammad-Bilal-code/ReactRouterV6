@@ -27,10 +27,10 @@ const LandingPage = () => {
           <button onClick={() => navigate("/contact")}>Contact</button>
         </li>
         <li>
-          <button onClick={() => navigateTo("./users")}>Users</button>
+          <button onClick={() => navigateTo("/users")}>Users</button>
         </li>
         <li>
-          <button onClick={() => navigateTo("./filter")}>Filter</button>
+          <button onClick={() => navigateTo("/filter")}>Filter</button>
         </li>
       </ul>
     </>
